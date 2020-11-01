@@ -1,0 +1,259 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+.fz-lg {
+  font-size: 48px;
+  line-height: 72px; }
+
+.fz-md {
+  font-size: 20px;
+  line-height: 30px; }
+
+.fz-xs {
+  font-size: 16px;
+  line-height: 24px; }
+
+* {
+  color: #650300; }
+
+.c-initial {
+  color: initial; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; }
+
+header {
+  background-color: #AA0601;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 88px; }
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .menu a {
+    margin-left: 64px;
+    color: #fff; }
+
+.banner {
+  background: url(https://hexschool.github.io/webLayoutTraining1st/week3/banner.png) no-repeat;
+  padding: 350px 405px 350px 939px;
+  background-size: cover; }
+
+.banner-info p {
+  font-size: 36px;
+  line-height: 54px;
+  padding-left: 63px; }
+
+.banner-info h1 {
+  font-size: 64px;
+  line-height: 96px;
+  padding-right: 9px; }
+
+.service {
+  padding: 64px 0;
+  background-color: #AA06010D; }
+  .service h2 {
+    margin-bottom: 64px; }
+  .service ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline; }
+
+.service-info {
+  width: 208px; }
+  .service-info .service-icon {
+    margin-bottom: 40px; }
+  .service-info h3 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 4px; }
+  .service-info p {
+    text-align: left;
+    color: #000; }
+
+.product {
+  padding: 64px 0 80px; }
+  .product h2 {
+    margin-bottom: 60px; }
+
+.product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px; }
+  .product-info:nth-child(2) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
+    .product-info:nth-child(2) .product-image {
+      margin-right: 0;
+      margin-left: 30px; }
+  .product-info .product-image {
+    margin-right: 30px; }
+  .product-info .product-icon {
+    margin-right: 8px; }
+  .product-info span {
+    color: #AA0601; }
+
+.joint-design {
+  background: url(https://hexschool.github.io/webLayoutTraining1st/week3/bg.png) center center no-repeat;
+  padding: 64px 0 80px; }
+  .joint-design h2 {
+    color: #fff; }
+  .joint-design ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .joint-design h3 {
+    font-size: 72px;
+    line-height: 108px;
+    color: #AA0601; }
+  .joint-design .joint-design-double {
+    margin-right: 30px;
+    padding: 188px 104px;
+    position: relative;
+    background-color: #fff; }
+    .joint-design .joint-design-double::before {
+      content: "";
+      background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-8.png) no-repeat center center;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: 1; }
+  .joint-design .joint-design-youth {
+    padding: 188px 152px;
+    background-color: #fff;
+    position: relative; }
+    .joint-design .joint-design-youth::before {
+      content: "";
+      background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-9.png) no-repeat center center;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: 1; }
+
+.recommendation {
+  padding: 64px 0; }
+  .recommendation h2 {
+    margin-bottom: 60px; }
+
+.recommendation-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left; }
+  .recommendation-info li {
+    max-width: 255px; }
+  .recommendation-info .recommendation-text {
+    padding: 15px 16px;
+    border: 1px solid #DEE2E6; }
+    .recommendation-info .recommendation-text h3 {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 7px; }
+    .recommendation-info .recommendation-text h4 {
+      margin-bottom: 10px; }
+
+.contact {
+  padding: 64px 595px 80px;
+  background-color: #AA06010D; }
+  .contact h2 {
+    text-align: center;
+    margin-bottom: 24px; }
+  .contact p {
+    margin-bottom: 20px; }
+  .contact li {
+    margin-bottom: 16px; }
+    .contact li:nth-last-child(2) {
+      margin-bottom: 42px; }
+  .contact h3 {
+    margin-bottom: 4px; }
+  .contact .contact-form-input {
+    height: 50px;
+    border: 1px solid #000; }
+  .contact .contact-form-textarea {
+    height: 136px;
+    border: 1px solid #000; }
+  .contact .contact-button {
+    width: 350px;
+    margin: 0 auto;
+    color: #fff;
+    padding: 16px 143px;
+    background-color: #AA0601; }
+/*# sourceMappingURL=index.css.map */
