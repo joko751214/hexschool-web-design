@@ -130,8 +130,8 @@ header {
 
 @media (max-width: 768px) {
   h2 {
-    font-size: 32px;
-    line-height: 48px; }
+    font-size: 28px;
+    line-height: 42px; }
   header {
     padding: 30px 39px; }
   .menu li {
@@ -192,6 +192,81 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+
+@media (max-width: 768px) {
+  .product-menu-list li:nth-child(1) {
+    padding: 16px 51px; }
+  .product-menu-list li:nth-child(2) {
+    padding: 16px 21px; }
+  .product-menu-list li:nth-child(3) {
+    padding: 16px 28px; }
+    .product-menu-list li:nth-child(3) img {
+      width: 23px; }
+  .product-menu-list li img {
+    width: 32px; }
+  .product-menu-list .active {
+    border-bottom: 8px solid #AA0601; } }
+
+.product-case {
+  padding: 88px 0 168px; }
+  .product-case h3 {
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 40px; }
+
+.product-case-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .product-case-content li {
+    width: calc( 25% - 30px);
+    margin-bottom: 104px; }
+
+.product-case-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 24px;
+  line-height: 36px; }
+  .product-case-info .product-case-price {
+    color: #AA0601; }
+
+.product-case-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .product-case-color .brown {
+    width: 24px;
+    height: 24px;
+    background-color: #5F3E2D;
+    margin-right: 8px; }
+  .product-case-color .orange {
+    width: 24px;
+    height: 24px;
+    background-color: #B75929; }
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .pagination li {
+    border: 1px solid #000;
+    padding: 10px 17px 14px 14px; }
+    .pagination li:nth-child(1) {
+      padding: 10px 12px 12px; }
+    .pagination li:nth-last-child(1) {
+      padding: 10px 12px 12px; }
 
 footer {
   padding: 36px 0 40px;

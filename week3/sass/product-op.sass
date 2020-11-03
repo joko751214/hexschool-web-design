@@ -115,8 +115,8 @@ header
       color: #fff
 @media( max-width: 768px )
   h2
-    font-size: 32px
-    line-height: 48px
+    font-size: 28px
+    line-height: 42px
   header
     padding: 30px 39px
   .menu
@@ -161,6 +161,64 @@ header
 .product-menu-image
   display: flex
   justify-content: space-between
+@media( max-width: 768px )
+  .product-menu-list
+    li
+      &:nth-child(1)
+        padding: 16px 51px
+      &:nth-child(2)
+        padding: 16px 21px
+      &:nth-child(3)
+        padding: 16px 28px
+        img
+          width: 23px
+      img
+        width: 32px
+    .active
+      border-bottom: 8px solid #AA0601
+
+.product-case
+  padding: 88px 0 168px
+  h3
+    font-size: 32px
+    line-height: 48px
+    margin-bottom: 40px
+.product-case-content
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  li
+    width: calc( 25% - 30px )
+    margin-bottom: 104px
+.product-case-info
+  display: flex
+  justify-content: space-between
+  font-size: 24px
+  line-height: 36px
+  .product-case-price
+    color: #AA0601
+.product-case-color
+  display: flex
+  .brown
+    width: 24px
+    height: 24px
+    background-color: #5F3E2D
+    margin-right: 8px
+  .orange
+    width: 24px
+    height: 24px
+    background-color: #B75929
+.pagination
+  display: flex
+  justify-content: center
+  li
+    border: 1px solid #000
+    padding: 10px 17px 14px 14px
+    &:nth-child(1)
+      padding: 10px 12px 12px
+    &:nth-last-child(1)
+      padding: 10px 12px 12px
+      
 
 footer
   padding: 36px 0 40px
