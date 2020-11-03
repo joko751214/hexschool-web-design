@@ -539,6 +539,9 @@ header {
   background-color: #AA0601;
   border: 0;
   margin: 0 auto; }
+  .contact-button:hover {
+    cursor: pointer;
+    background-color: #650300; }
 
 @media (max-width: 768px) {
   .contact {
