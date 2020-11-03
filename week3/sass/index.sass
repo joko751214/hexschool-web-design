@@ -42,10 +42,16 @@ a
 	text-decoration: none
 // * css reset end *
 
+// * rwd img css，可當作是 CSS Reset 其中一個 *
 img
   max-width: 100%
   height: auto
-  display: block
+
+// * 全域 border box *
+
+*,*:before,*:after
+  box-sizing: border-box
+
 
 // util classes
 .fz-lg
@@ -57,16 +63,43 @@ img
 .fz-xs
   font-size: 16px
   line-height: 24px
+  
+.noto-regular
+  font-family: 'Noto Sans', sans-serif
+  font-weight: 400
+.noto-bold
+  font-family: 'Noto Sans', sans-serif
+  font-weight: 700
+.roboto-regular
+  font-family: 'Roboto', sans-serif
+  font-weight: 400
+.roboto-medium
+    font-family: 'Roboto', sans-serif
+    font-weight: 500
+.roboto-bold
+    font-family: 'Roboto', sans-serif
+    font-weight: 700
+.roboto-black-italic
+    font-family: 'Roboto', sans-serif
+    font-weight: 900
+    font-style: italic
+
 
 *
   color: #650300
 .c-initial
   color: initial
+.c-white
+  color: #fff
 
 .container
   max-width: 1200px
   margin: 0 auto
   text-align: center
+
+h2
+  font-size: 48px
+  line-height: 72px
 
 header
   background-color: #AA0601
@@ -76,14 +109,42 @@ header
   padding: 30px 88px
 .menu
   display: flex
-  a
+  li
     margin-left: 64px
-    color: #fff
+    a
+      color: #fff
+@media( max-width: 768px )
+  h2
+    font-size: 32px
+    line-height: 48px
+  header
+    padding: 30px 39px
+  .menu
+    li
+      margin-left: 40px
+@media( max-width: 375px )
+  h2
+    font-size: 24px
+    line-height: 48px
+  header
+    flex-direction: column
+    padding: initial
+  .logo
+    padding: 10px 163px
+  .menu
+    flex-wrap: wrap
+    li
+      margin-left: 0
+      padding: 8px 52.5px
+      border: 1px solid #fff
+      &:nth-child(3)
+        padding: 8px 62.5px
 
 .banner
   background: url(https://hexschool.github.io/webLayoutTraining1st/week3/banner.png) no-repeat
   padding: 350px 405px 350px 939px
   background-size: cover
+  text-align: right
 .banner-info
   p
     font-size: 36px
@@ -92,7 +153,31 @@ header
   h1
     font-size: 64px
     line-height: 96px
-    padding-right: 9px
+@media( max-width: 768px )
+  .banner
+    padding: 372px 39px 373px 297px
+    background-position: center
+  .banner-info
+    p
+      font-size: 20px
+      line-height: 30px
+      padding-left: 140px
+    h1
+      font-size: 48px
+      line-height: 72px
+@media( max-width: 375px )
+  .banner
+    background: url(https://hexschool.github.io/webLayoutTraining1st/week3/banner-sm.png) no-repeat
+    background-size: cover
+    padding: 164px 15px 163px 72px
+  .banner-info
+    p
+      font-size: 16px
+      line-height: 22px
+      padding-left: 54px
+    h1
+      font-size: 32px
+      line-height: 45px
 
 .service
   padding: 64px 0
@@ -104,7 +189,7 @@ header
     justify-content: space-around
     align-items: baseline
 .service-info
-  width: 208px
+  width: 18%
   .service-icon
     margin-bottom: 40px
   h3
@@ -114,6 +199,42 @@ header
   p
     text-align: left
     color: #000
+@media( max-width: 768px )
+  .service
+    padding: 40px 85px 40px
+    h2
+      margin-bottom: 32px
+    ul
+      flex-wrap: wrap
+  .service-info
+    width: 40%
+    margin-bottom: 40px
+    .service-icon
+      margin-bottom: 16px
+    &:nth-child(2)
+      order: -2
+    &:nth-child(3)
+      order: -1
+    h3
+      font-size: 20px
+      line-height: 30px
+      margin-bottom: 8px
+@media( max-width: 375px )
+  .service
+    padding: 32px 55.5px 12px
+    h2
+      margin-bottom: 20px
+    ul
+      flex-direction: column
+  .service-info
+    width: 90%
+    margin-bottom: 40px
+    .service-icon
+      margin-bottom: 16px
+    h3
+      font-size: 20px
+      line-height: 30px
+      margin-bottom: 8px
 
 .product
   padding: 64px 0 80px
@@ -134,12 +255,73 @@ header
     margin-right: 8px
   span
     color: #AA0601
+@media( max-width: 768px )
+  .product
+    padding: 40px 39px
+    h2
+      margin-bottom: 24px
+  .product-info
+    margin-top: 8px
+    margin-bottom: 0
+    &:nth-child(2)
+      flex-direction: row
+      .product-image
+        margin-left: 0
+        margin-right: 30px
+    .product-image
+      width: 390px
+    .product-icon
+      width: 32px
+      vertical-align: -40%
+    span
+      font-size: 28px
+      line-height: 42px
+@media( max-width: 375px )
+  .product
+    padding: 32px 15px
+  .product-image
+    display: none
+  .product-info
+    &:nth-child(1)
+      background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-1.png) center no-repeat
+      background-size: cover
+      padding: 48px 96px
+      .product-icon
+        margin-right: 0
+        background: url(https://hexschool.github.io/webLayoutTraining1st/week3/icon-diamond-white.svg) no-repeat
+        width: 32px
+        height: 25px
+        padding-left: 32px
+    &:nth-child(2)
+      background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-2.png) center no-repeat
+      background-size: cover
+      padding: 48px 66px
+      .product-icon
+        margin-right: 0
+        background: url(https://hexschool.github.io/webLayoutTraining1st/week3/icon-sun-white.svg) no-repeat
+        width: 32px
+        height: 32px
+        padding-left: 32px
+    &:nth-child(3)
+      background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-2.png) center no-repeat
+      background-size: cover
+      padding: 48px 73px
+      .product-icon
+        margin-right: 0
+        background: url(https://hexschool.github.io/webLayoutTraining1st/week3/icon-thunder-white.svg) no-repeat
+        width: 23px
+        height: 32px
+        padding-left: 23px
+    span
+      color: #fff
+
 
 .joint-design
   background: url(https://hexschool.github.io/webLayoutTraining1st/week3/bg.png) center center no-repeat
   padding: 64px 0 80px
   h2
     color: #fff
+    margin-bottom: 60px
   ul
     display: flex
   h3
@@ -151,9 +333,10 @@ header
     padding: 188px 104px
     position: relative
     background-color: #fff
-    &::before
+    &:before
       content: ""
       background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-8.png) no-repeat center center
+      background-size: cover
       opacity: 0.5
       top: 0
       left: 0
@@ -165,9 +348,10 @@ header
     padding: 188px 152px
     background-color: #fff
     position: relative
-    &::before
+    &:before
       content: ""
       background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-9.png) no-repeat center center
+      background-size: cover
       opacity: 0.5
       top: 0
       left: 0
@@ -175,6 +359,32 @@ header
       right: 0
       position: absolute
       z-index: 1
+@media( max-width: 768px )
+  .joint-design
+    padding: 40px 39px
+    background-size: cover
+    h2
+      margin-bottom: 32px
+    h3
+      font-size: 32px
+      line-height: 25px
+    .joint-design-double
+      padding: 118px 91px
+    .joint-design-youth
+      padding: 118px 112px
+@media( max-width: 375px )
+  .joint-design
+    padding: 32px 15px
+    h2
+      margin-bottom: 20px
+    ul
+      flex-wrap: wrap
+    .joint-design-double
+      padding: 120px 98px
+      margin-right: 0
+      margin-bottom: 16px
+    .joint-design-youth
+      padding: 120px
 
 .recommendation
   padding: 64px 0
@@ -184,8 +394,11 @@ header
   display: flex
   justify-content: space-between
   text-align: left
+  img
+    display: block
+    max-width: 100%
   li
-    max-width: 255px
+    max-width: calc( 100%/4 - 30px )
   .recommendation-text
     padding: 15px 16px
     border: 1px solid #DEE2E6
@@ -194,7 +407,32 @@ header
       line-height: 21px
       margin-bottom: 7px
     h4
+      font-size: 16px
+      line-height: 24px
       margin-bottom: 10px
+    p
+      font-size: 14px
+      line-height: 21px
+      color: #707070
+@media( max-width: 768px )
+  .recommendation
+    padding: 40px 39px 12px
+    h2
+      margin-bottom: 32px
+  .recommendation-info
+    flex-wrap: wrap
+    li
+      max-width: calc( 100%/2 - 30px )
+    .recommendation-text
+      margin-bottom: 28px
+@media( max-width: 375px )
+  .recommendation
+    padding: 32px 15px
+  .recommendation-info
+    img
+      width: 100%
+    li
+      max-width: 100%
 
 .contact
   padding: 64px 595px 80px
@@ -203,22 +441,179 @@ header
     text-align: center
     margin-bottom: 24px
   p
+    font-size: 20px
+    line-height: 30px
     margin-bottom: 20px
-  li
-    margin-bottom: 16px
-    &:nth-last-child(2)
-      margin-bottom: 42px
-  h3
+.contact-form-group
+  margin-bottom: 16px
+  label
+    display: block
     margin-bottom: 4px
-  .contact-form-input
-    height: 50px
+    font-size: 16px
+    line-height: 24px
+  input
+    display: block
+    width: 100%
+    padding: 14px 16px
+    background-color: transparent
     border: 1px solid #000
-  .contact-form-textarea
-    height: 136px
+  textarea
+    display: block
+    width: 100%
+    padding: 14px 16px 100px
+    background-color: transparent
     border: 1px solid #000
+  &:nth-child(5)
+    margin-bottom: 42px
+    display: flex
+    input,label
+      display: initial
+      width: initial
+.contact-button
+  display: block
+  color: #fff
+  padding: 16px 143px
+  background-color: #AA0601
+  border: 0
+  margin: 0 auto
+@media( max-width: 768px )
+  .contact
+    padding: 40px 159px 48px
+    h2
+      margin-bottom: 16px
+    p
+      font-size: 16px
+      line-height: 24px
+      margin-bottom: 12px
+  .contact-form-group
+    label
+      font-size: 14px
+      line-height: 21px
+    input
+      padding: 8px 12px
+    textarea
+      padding: 8px 12px 72px
+    .contact-button
+      padding: 8px 76px
+@media( max-width: 375px )
+  .contact
+    padding: 32px 15px
   .contact-button
-    width: 350px
-    margin: 0 auto
-    color: #fff
-    padding: 16px 143px
-    background-color: #AA0601
+      padding: 8px 54.5px
+  .contact-form-group
+    margin-bottom: 8px
+    &:nth-child(5)
+      margin-bottom: 24px
+
+footer
+  padding: 36px 0 40px
+  background-color: #AA0601
+  color: #fff
+  .container
+    text-align: left
+.footer-menu
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  flex-wrap: wrap
+  margin-bottom: 24px
+  border-bottom: 1px solid #fff
+  a
+    display: block
+.footer-menu-list
+  display: flex
+  margin-bottom: 18px
+  li
+    margin-right: 48px
+.footer-menu-icon
+  display: flex
+  li
+    margin-left: 32px
+.footer-menu-info
+  margin-bottom: 5px
+  span
+    font-size: 36px
+    line-height: 54px
+  li
+    margin-bottom: 17px
+  img
+    vertical-align: middle
+    margin-right: 17px
+.footer-copyright
+  display: flex
+  justify-content: space-between
+  align-items: center
+  img
+    margin-right: 38px
+    vertical-align: middle
+  a
+    font-size: 14px
+    line-height: 21px
+  ul
+    display: flex
+.footer-copyright-menu
+  li
+    margin-left: 62px
+@media( max-width: 768px )
+  footer
+    padding: 40px 39px 40px 48px
+  .footer-menu
+    align-items: flex-start
+  .footer-menu-list
+    li
+      margin-right: 40px  
+  .footer-menu-icon
+    li
+      width: 24px
+      margin-left: 24px
+  .footer-menu-info
+    span
+      font-size: 20px
+      line-height: 30px
+    img
+      width: 24px
+  .footer-copyright
+    img
+      display: none
+    p
+      font-size: 14px
+      line-height: 21px
+  .footer-copyright-menu
+    li
+      margin-left: 24px
+@media( max-width: 375px )
+  footer
+    padding: 25px 15px
+  .footer-menu
+    margin-bottom: 18px
+  .footer-menu-list
+    li
+      display: none
+  .footer-menu-info
+    order: -1
+    margin-bottom: 17px
+    li
+      margin-bottom: 7px
+    img
+      width: 20px
+      margin-right: 4px
+    span
+      font-size: 16px
+      line-height: 30px
+  .footer-copyright
+    flex-direction: column
+    align-items: start
+    position: relative
+    img
+      display: initial
+      width: 47px
+      margin-right: 0
+  .footer-copyright-text
+    img
+      position: absolute
+      right: 0
+      bottom: 0
+  .footer-copyright-menu
+    flex-direction: column
+    li
+      margin-left: 0
