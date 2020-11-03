@@ -146,16 +146,13 @@ header
   li
     box-sizing: border-box
     border: 1px solid #DCDCDC
+    width: 24%
     a
       display: flex
+      justify-content: center
+      padding: 24px 0
       img
         margin-right: 8px
-    &:nth-child(1)
-      padding: 24px 117px
-    &:nth-child(2)
-      padding: 24px 72px
-    &:nth-child(3)
-      padding: 24px 82px
   .active
     border-bottom: 16px solid #AA0601
 .product-menu-image
@@ -164,16 +161,11 @@ header
 @media( max-width: 768px )
   .product-menu-list
     li
-      &:nth-child(1)
-        padding: 16px 51px
-      &:nth-child(2)
-        padding: 16px 21px
-      &:nth-child(3)
-        padding: 16px 28px
-        img
-          width: 23px
+      width: 33.33%
+      a
+        padding: 16px 0
       img
-        width: 32px
+        width: 10%
     .active
       border-bottom: 8px solid #AA0601
 
