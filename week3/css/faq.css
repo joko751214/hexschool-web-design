@@ -147,11 +147,12 @@ header {
 
 .faq-banner {
   background: url(https://hexschool.github.io/webLayoutTraining1st/week3/qa.png) no-repeat;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 214px 1171px 0 405px; }
+  background-size: cover; }
+  .faq-banner .container {
+    padding-top: 214px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   .faq-banner h2 {
     font-size: 64px;
     line-height: 67px;
@@ -162,7 +163,9 @@ header {
 @media (max-width: 768px) {
   .faq-banner {
     background-position: 30%;
-    padding: 237px 473px 0 39px; }
+    padding: 0 39px; }
+    .faq-banner .container {
+      padding-top: 237px; }
     .faq-banner h2 {
       font-size: 48px;
       line-height: 80px;
@@ -170,13 +173,15 @@ header {
 
 @media (max-width: 375px) {
   .faq-banner {
-    padding: 103px 216px 0 15px; }
+    padding: 0 15px; }
+    .faq-banner .container {
+      padding-top: 103px; }
     .faq-banner h2 {
       font-size: 28px;
       line-height: 40px;
       margin-right: 6px; }
     .faq-banner img {
-      width: 18%; } }
+      width: 7%; } }
 
 .faq-content {
   padding: 40px 0 264px; }
