@@ -84,9 +84,6 @@ img
     font-weight: 900
     font-style: italic
 
-
-*
-  color: #000
 .c-initial
   color: initial
 .c-white
@@ -95,11 +92,6 @@ img
 .container
   max-width: 1200px
   margin: 0 auto
-  text-align: center
-
-h2
-  font-size: 42px
-  line-height: 63px
 
 header
   background-color: #AA0601
@@ -114,18 +106,12 @@ header
     a
       color: #fff
 @media( max-width: 768px )
-  h2
-    font-size: 28px
-    line-height: 42px
   header
     padding: 30px 39px
   .menu
     li
       margin-left: 40px
 @media( max-width: 375px )
-  h2
-    font-size: 24px
-    line-height: 48px
   header
     flex-direction: column
     padding: initial
@@ -140,85 +126,67 @@ header
       &:nth-child(3)
         padding: 8px 62.5px
 
-.product-menu-list
+.blog-menu
+  background-color: #650300
+  color: #fff
+  padding: 12px 0 14px
+  font-size: 20px
+  line-height: 24px
+  .container
+    display: flex
+    justify-content: space-between
+.blog-list
   display: flex
-  justify-content: center
   li
-    box-sizing: border-box
-    border: 1px solid #DCDCDC
-    width: 24%
-    a
-      display: flex
-      justify-content: center
-      padding: 24px 0
-      img
-        margin-right: 8px
-  .active
-    border-bottom: 16px solid #AA0601
-.product-menu-image
-  display: flex
-  justify-content: space-between
+    margin-right: 48px
 @media( max-width: 768px )
-  .product-menu-list
-    li
-      width: 33.33%
-      a
-        padding: 16px 0
-      img
-        width: 10%
-    .active
-      border-bottom: 8px solid #AA0601
+  .blog-menu
+    font-size: 16px
+    line-height: 22px
+    padding: 16px 39px
 @media( max-width: 375px )
-  .product-menu-list
-    h2
-      font-size: 14px
-      line-height: 19px
-    li
-      width: 33.33%
-      a
-        padding: 16px 0
-        img
-          width: 10%
-          margin-right: 4px
-    .active
-      border-bottom: 4px solid #AA0601
+  .blog-menu
+    display: none
 
-.product-case
-  padding: 88px 0 168px
-  h3
+.blog-item
+  padding: 82px 0 156px
+.blog-info
+  display: flex
+  justify-content: space-between
+  margin-bottom: 60px
+  &:nth-child(5)
+    margin-bottom: 110px
+.blog-image
+  width: 50%
+  margin-right: 30px
+  img
+    display: block
+.blog-text
+  width: 50%
+  h2
     font-size: 32px
+    line-height: 45px
+    color: #650300
+  h3,p
+    text-align: left
+    font-size: 20px
+    line-height: 30px
+  h4
+    font-size: 16px
+    line-height: 21px
+  a
+    font-size: 36px
     line-height: 48px
-    margin-bottom: 40px
-.product-case-content
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
-  li
-    width: calc( 25% - 30px )
-    margin-bottom: 104px
-    img
-      display: block
-      width: 100%
-.product-case-info
+    color: #650300
+  li:nth-last-child(1)
+    text-align: right
+  p
+    margin-bottom: 78px
+.blog-text-info
   display: flex
   justify-content: space-between
-  font-size: 24px
-  line-height: 36px
-  .product-case-price
-    color: #AA0601
-.product-case-color
-  display: flex
-  .brown
-    width: 24px
-    height: 24px
-    background-color: #5F3E2D
-    margin-right: 8px
-    border-radius: 4px
-  .orange
-    width: 24px
-    height: 24px
-    background-color: #B75929
-    border-radius: 4px
+  align-items: center
+  margin-bottom: 24px
 .pagination
   display: flex
   justify-content: center
@@ -227,6 +195,7 @@ header
     border: 1px solid #000
     width: 2.5%
     padding: 10px 0 12px
+    text-align: center
     &:nth-child(1)
       width: 5%
     &:nth-last-child(1)
@@ -236,19 +205,33 @@ header
     a
       color: #fff
 @media( max-width: 768px )
-  .product-case
+  .blog-item
     padding: 40px 39px 104px
+  .blog-text
     h2
-      font-size: 32px
-      line-height: 48px
+      font-size: 20px
+      line-height: 28px
     h3
-      font-size: 24px
-      line-height: 36px
-  .product-case-content
-    margin-bottom: 28px
-    li
-      width: calc( 50% - 30px )
-      margin-bottom: 72px
+      font-size: 16px
+      line-height: 21px
+    h4
+      font-size: 14px
+      line-height: 19px
+    p
+      font-size: 14px
+      line-height: 21px
+      margin-bottom: 0
+    a
+      font-size: 14px
+      line-height: 21px
+    li:nth-last-child(1)
+      display: inline
+      p
+        display: inline
+  .blog-info
+    margin-bottom: 32px
+    &:nth-child(5)
+      margin-bottom: 104px
   .pagination
     li
       width: 5%
@@ -258,31 +241,27 @@ header
       &:nth-last-child(1)
         width: 10%
 @media( max-width: 375px )
-  .product-case
-    padding: 30px 15px 56px
+  .blog-item
+    padding: 24px 15px 56px
+  .blog-info
+    flex-direction: column
+    margin-bottom: 26px
+  .blog-image
+    width: 100%
+    margin-right: 0
+    margin-bottom: 8px
+  .blog-text
+    width: 100%
     h2
-      font-size: 20px
-      line-height: 26px
-    h3
       font-size: 16px
       line-height: 22px
-      margin-bottom: 20px
-    p
-      font-size: 16px
-      line-height: 21px
-  .product-case-content
-    margin-bottom: 8px
-    li
-      width: 100%
-      margin-bottom: 32px
-  .product-case-color
-    .brown
-      width: 16px
-      height: 16px
-      margin-right: 4px
-    .orange
-      width: 16px
-      height: 16px
+    h3,h4
+      font-size: 14px
+      line-height: 19px
+    li:nth-last-child(1)
+      display: none
+  .blog-text-info
+    margin-bottom: 0
   .pagination
     li
       width: 10%
@@ -294,7 +273,6 @@ header
       a
         font-size: 12px
         line-height: 18px
-
 
 footer
   padding: 36px 0 40px
