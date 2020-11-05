@@ -285,7 +285,7 @@ header {
 
 @media (max-width: 768px) {
   .blog-content {
-    padding-left: 39px;
+    padding: 0 39px;
     margin-bottom: 104px; }
     .blog-content h2 {
       margin-bottom: 0; }

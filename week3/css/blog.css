@@ -249,6 +249,8 @@ header {
       width: 5%; }
     .pagination li:nth-last-child(1) {
       width: 5%; }
+    .pagination li a {
+      color: #000; }
   .pagination .active {
     background-color: #000; }
     .pagination .active a {

@@ -184,7 +184,7 @@ header {
       width: 7%; } }
 
 .location-content {
-  padding: 22px 0 272px; }
+  padding: 22px 0 642px; }
   .location-content h3 {
     font-size: 24px;
     line-height: 33px;
@@ -200,23 +200,22 @@ header {
   .location-content img {
     display: block; }
 
-.location-item {
+.location-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
-.location-content-detail {
-  width: calc( 33.33% - 30px);
-  margin-right: 30px;
-  margin-bottom: 32px; }
-  .location-content-detail a {
-    display: block;
-    text-align: center;
-    padding: 20px 0;
-    background-color: #000;
-    color: #fff; }
+.location-content-map {
+  width: 60%; }
+  .location-content-map img {
+    min-height: 100%; }
+
+.location-item {
+  width: 40%;
+  margin-right: 30px; }
 
 .location-content-name {
   padding: 12px 24px;
@@ -240,7 +239,7 @@ header {
 
 @media (max-width: 768px) {
   .location-content {
-    padding: 8px 9px 84px 39px; }
+    padding: 8px 39px 104px; }
     .location-content h3 {
       font-size: 16px;
       line-height: 22px;
@@ -253,14 +252,24 @@ header {
     .location-content p {
       font-size: 14px;
       line-height: 21px; }
-  .location-content-detail {
-    width: calc( 50% - 30px);
-    margin-right: 30px;
-    margin-bottom: 20px; }
-    .location-content-detail a {
-      padding: 16px 0;
-      font-size: 14px;
-      line-height: 21px; } }
+  .location-area {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .location-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%; }
+    .location-item .location-content-image {
+      width: 49%;
+      margin-bottom: 32px; }
+    .location-item .location-content-detail {
+      width: 49%; }
+  .location-content-map {
+    width: 100%; } }
 
 @media (max-width: 375px) {
   .location-content {
@@ -268,13 +277,19 @@ header {
     .location-content h3 {
       font-size: 14px;
       line-height: 20px;
-      margin-bottom: 36px; }
+      margin-bottom: 20px; }
     .location-content select {
       margin-left: 12px; }
-  .location-content-detail {
-    width: 100%;
-    margin-bottom: 16px;
-    margin-right: 0; } }
+  .location-item {
+    display: block;
+    margin-right: 0; }
+    .location-item .location-content-image {
+      margin-bottom: 0;
+      width: 100%;
+      margin-right: 0; }
+    .location-item .location-content-detail {
+      width: 100%;
+      margin-bottom: 16px; } }
 
 footer {
   padding: 36px 0 40px;
@@ -419,4 +434,4 @@ footer {
             flex-direction: column; }
     .footer-copyright-menu li {
       margin-left: 0; } }
-/*# sourceMappingURL=location.css.map */
+/*# sourceMappingURL=location-2.css.map */
