@@ -128,7 +128,7 @@ header {
     .menu li a {
       color: #fff; }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   h2 {
     font-size: 28px;
     line-height: 42px; }
@@ -137,7 +137,7 @@ header {
   .menu li {
     margin-left: 40px; } }
 
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   h2 {
     font-size: 24px;
     line-height: 48px; }
@@ -192,7 +192,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .product-menu-list li {
     width: 33.33%; }
     .product-menu-list li a {
@@ -202,7 +202,7 @@ header {
   .product-menu-list .active {
     border-bottom: 8px solid #AA0601; } }
 
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   .product-menu-list h2 {
     font-size: 14px;
     line-height: 19px; }
@@ -279,18 +279,13 @@ header {
           align-items: center; }
   .pagination li {
     border: 1px solid #000;
-    width: 2.5%;
-    padding: 10px 0 12px; }
-    .pagination li:nth-child(1) {
-      width: 5%; }
-    .pagination li:nth-last-child(1) {
-      width: 5%; }
+    padding: 10px 15px 12px; }
   .pagination .active {
     background-color: #000; }
     .pagination .active a {
       color: #fff; }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .product-case {
     padding: 40px 39px 104px; }
     .product-case h2 {
@@ -305,14 +300,9 @@ header {
       width: calc( 50% - 30px);
       margin-bottom: 72px; }
   .pagination li {
-    width: 5%;
-    padding: 10px 0 12px; }
-    .pagination li:nth-child(1) {
-      width: 10%; }
-    .pagination li:nth-last-child(1) {
-      width: 10%; } }
+    padding: 10px 15px 12px; } }
 
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   .product-case {
     padding: 30px 15px 56px; }
     .product-case h2 {
@@ -338,12 +328,7 @@ header {
     width: 16px;
     height: 16px; }
   .pagination li {
-    width: 10%;
-    padding: 8px 0; }
-    .pagination li:nth-child(1) {
-      width: 15%; }
-    .pagination li:nth-last-child(1) {
-      width: 15%; }
+    padding: 8px 10px; }
     .pagination li a {
       font-size: 12px;
       line-height: 18px; } }
@@ -422,7 +407,7 @@ footer {
 .footer-copyright-menu li {
   margin-left: 62px; }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   footer {
     padding: 40px 39px 40px 48px; }
   .footer-menu {
@@ -447,7 +432,7 @@ footer {
   .footer-copyright-menu li {
     margin-left: 24px; } }
 
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   footer {
     padding: 25px 15px; }
   .footer-menu {

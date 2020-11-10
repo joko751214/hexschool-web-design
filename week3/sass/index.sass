@@ -107,13 +107,16 @@ header
   justify-content: space-between
   align-items: center
   padding: 30px 88px
+  a
+    color: #fff
+    &:hover
+      opacity: 0.7
 .menu
   display: flex
   li
     margin-left: 64px
-    a
-      color: #fff
-@media( max-width: 768px )
+    
+@media( max-width: 992px )
   h2
     font-size: 32px
     line-height: 48px
@@ -122,7 +125,7 @@ header
   .menu
     li
       margin-left: 40px
-@media( max-width: 375px )
+@media( max-width: 767px )
   h2
     font-size: 24px
     line-height: 48px
@@ -142,12 +145,12 @@ header
 
 .banner
   background: url(https://hexschool.github.io/webLayoutTraining1st/week3/banner.png) no-repeat
-  height: 840px
   background-size: cover
-  // text-align: right
-  display: flex
-  align-items: center
-  justify-content: center
+  .container
+    display: flex
+    height: 840px
+    align-items: center
+    justify-content: flex-end
 .banner-info
   p
     font-size: 36px
@@ -156,7 +159,7 @@ header
   h1
     font-size: 64px
     line-height: 96px
-@media( max-width: 768px )
+@media( max-width: 992px )
   .banner
     padding: 372px 39px 373px 297px
     background-position: center
@@ -168,7 +171,7 @@ header
     h1
       font-size: 48px
       line-height: 72px
-@media( max-width: 375px )
+@media( max-width: 767px )
   .banner
     background: url(https://hexschool.github.io/webLayoutTraining1st/week3/banner-sm.png) no-repeat
     background-size: cover
@@ -202,7 +205,7 @@ header
   p
     text-align: left
     color: #000
-@media( max-width: 768px )
+@media( max-width: 992px )
   .service
     padding: 40px 85px 40px
     h2
@@ -222,7 +225,7 @@ header
       font-size: 20px
       line-height: 30px
       margin-bottom: 8px
-@media( max-width: 375px )
+@media( max-width: 767px )
   .service
     padding: 32px 55.5px 12px
     h2
@@ -247,18 +250,22 @@ header
   display: flex
   align-items: center
   margin-bottom: 32px
+  a
+    display: flex
+    align-items: center
+  p
+    color: #AA0601
   &:nth-child(2)
     flex-direction: row-reverse
     .product-image
       margin-right: 0
       margin-left: 30px
   .product-image
+    width: 58%
     margin-right: 30px
   .product-icon
     margin-right: 8px
-  span
-    color: #AA0601
-@media( max-width: 768px )
+@media( max-width: 992px )
   .product
     padding: 40px 39px
     h2
@@ -276,19 +283,22 @@ header
     .product-icon
       width: 32px
       vertical-align: -40%
-    span
+    p
       font-size: 28px
       line-height: 42px
-@media( max-width: 375px )
+@media( max-width: 767px )
   .product
     padding: 32px 15px
   .product-image
     display: none
   .product-info
+    a
+      justify-content: center
+      width: 100%
     &:nth-child(1)
       background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-1.png) center no-repeat
       background-size: cover
-      padding: 48px 96px
+      height: 134px
       .product-icon
         margin-right: 0
         background: url(https://hexschool.github.io/webLayoutTraining1st/week3/icon-diamond-white.svg) no-repeat
@@ -298,7 +308,7 @@ header
     &:nth-child(2)
       background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-2.png) center no-repeat
       background-size: cover
-      padding: 48px 66px
+      height: 134px
       .product-icon
         margin-right: 0
         background: url(https://hexschool.github.io/webLayoutTraining1st/week3/icon-sun-white.svg) no-repeat
@@ -306,16 +316,16 @@ header
         height: 32px
         padding-left: 32px
     &:nth-child(3)
-      background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-2.png) center no-repeat
+      background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-3.png) center no-repeat
       background-size: cover
-      padding: 48px 73px
+      height: 134px
       .product-icon
         margin-right: 0
         background: url(https://hexschool.github.io/webLayoutTraining1st/week3/icon-thunder-white.svg) no-repeat
         width: 23px
         height: 32px
         padding-left: 23px
-    span
+    p
       color: #fff
 
 
@@ -331,9 +341,14 @@ header
     font-size: 72px
     line-height: 108px
     color: #AA0601
+  li
+    display: flex
+    justify-content: center
+    align-items: center
   .joint-design-double
     margin-right: 30px
-    padding: 188px 104px
+    width: 50%
+    height: 472px
     position: relative
     background-color: #fff
     &:before
@@ -348,7 +363,7 @@ header
       position: absolute
       z-index: 1
   .joint-design-youth
-    padding: 188px 152px
+    width: 50%
     background-color: #fff
     position: relative
     &:before
@@ -362,7 +377,7 @@ header
       right: 0
       position: absolute
       z-index: 1
-@media( max-width: 768px )
+@media( max-width: 992px )
   .joint-design
     padding: 40px 39px
     background-size: cover
@@ -371,11 +386,9 @@ header
     h3
       font-size: 32px
       line-height: 25px
-    .joint-design-double
-      padding: 118px 91px
-    .joint-design-youth
-      padding: 118px 112px
-@media( max-width: 375px )
+    .joint-design-double,.joint-design-youth
+      height: 280px
+@media( max-width: 767px )
   .joint-design
     padding: 32px 15px
     h2
@@ -383,11 +396,11 @@ header
     ul
       flex-wrap: wrap
     .joint-design-double
-      padding: 120px 98px
+      width: 100%
       margin-right: 0
       margin-bottom: 16px
     .joint-design-youth
-      padding: 120px
+      width: 100%
 
 .recommendation
   padding: 64px 0
@@ -409,15 +422,12 @@ header
       font-size: 14px
       line-height: 21px
       margin-bottom: 7px
-    h4
-      font-size: 16px
-      line-height: 24px
-      margin-bottom: 10px
     p
       font-size: 14px
       line-height: 21px
       color: #707070
-@media( max-width: 768px )
+      margin-bottom: 10px
+@media( max-width: 992px )
   .recommendation
     padding: 40px 39px 12px
     h2
@@ -428,7 +438,7 @@ header
       max-width: calc( 100%/2 - 30px )
     .recommendation-text
       margin-bottom: 28px
-@media( max-width: 375px )
+@media( max-width: 767px )
   .recommendation
     padding: 32px 15px
   .recommendation-info
@@ -438,15 +448,17 @@ header
       max-width: 100%
 
 .contact
-  padding: 64px 595px 80px
+  padding: 64px 0 80px
   background-color: #AA06010D
+  .container
+    max-width: 730px
   h2
-    text-align: center
     margin-bottom: 24px
   p
     font-size: 20px
     line-height: 30px
     margin-bottom: 20px
+    text-align: left
 .contact-form-group
   margin-bottom: 16px
   label
@@ -454,6 +466,7 @@ header
     margin-bottom: 4px
     font-size: 16px
     line-height: 24px
+    text-align: left
   input
     display: block
     width: 100%
@@ -482,9 +495,11 @@ header
   &:hover
     cursor: pointer
     background-color: #650300
-@media( max-width: 768px )
+@media( max-width: 992px )
   .contact
-    padding: 40px 159px 48px
+    padding: 40px 0 48px
+    .container
+      max-width: 450px
     h2
       margin-bottom: 16px
     p
@@ -501,7 +516,7 @@ header
       padding: 8px 12px 72px
     .contact-button
       padding: 8px 76px
-@media( max-width: 375px )
+@media( max-width: 767px )
   .contact
     padding: 32px 15px
   .contact-button
@@ -517,6 +532,8 @@ footer
   color: #fff
   .container
     text-align: left
+  a:hover
+    opacity: 0.7
 .footer-menu
   display: flex
   justify-content: space-between
@@ -537,13 +554,15 @@ footer
     margin-left: 32px
 .footer-menu-info
   margin-bottom: 5px
-  span
+  width: 50%
+  h2
     font-size: 36px
     line-height: 54px
   li
     margin-bottom: 17px
+    a
+      display: flex
   img
-    vertical-align: middle
     margin-right: 17px
 .footer-copyright
   display: flex
@@ -560,7 +579,7 @@ footer
 .footer-copyright-menu
   li
     margin-left: 62px
-@media( max-width: 768px )
+@media( max-width: 992px )
   footer
     padding: 40px 39px 40px 48px
   .footer-menu
@@ -573,7 +592,7 @@ footer
       width: 24px
       margin-left: 24px
   .footer-menu-info
-    span
+    h2
       font-size: 20px
       line-height: 30px
     img
@@ -587,7 +606,7 @@ footer
   .footer-copyright-menu
     li
       margin-left: 24px
-@media( max-width: 375px )
+@media( max-width: 767px )
   footer
     padding: 25px 15px
   .footer-menu
@@ -603,7 +622,7 @@ footer
     img
       width: 20px
       margin-right: 4px
-    span
+    h2
       font-size: 16px
       line-height: 30px
   .footer-copyright
