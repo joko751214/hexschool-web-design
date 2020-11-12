@@ -52,47 +52,47 @@ img {
           box-sizing: border-box; }
 
 .font-xl {
-  font-size: 64px;
+  font-size: 4rem;
   line-height: 90px; }
 
 .font-lg {
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 72px; }
 
 .font-md {
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 30px; }
 
 .font-sm {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px; }
 
 @media (max-width: 992px) {
   .font-xl {
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 72px; }
   .font-lg {
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 48px; }
   .font-md {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 24px; }
   .font-sm {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 21px; } }
 
 @media (max-width: 767px) {
   .font-xl {
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 45px; }
   .font-lg {
-    font-size: 24px;
-    line-height: 35px; }
+    font-size: 1.5rem;
+    line-height: 36px; }
   .font-md {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 24px; }
   .font-sm {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 21px; } }
 
 .noto-regular {
@@ -1192,6 +1192,8 @@ footer {
   display: flex; }
   .blog-list li {
     margin-right: 48px; }
+    .blog-list li a {
+      color: #fff; }
 
 @media (max-width: 992px) {
   .blog-menu {
