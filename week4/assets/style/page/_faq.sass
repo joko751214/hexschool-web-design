@@ -1,0 +1,87 @@
+.faq-banner
+  background: url(https://hexschool.github.io/webLayoutTraining1st/week3/qa.png) no-repeat
+  background-size: cover
+  .container
+    padding-top: 214px
+    display: flex
+    text-align: left
+  h2
+    font-size: 64px
+    line-height: 67px
+    margin-right: 24px
+    color: #000
+  img
+    display: block
++pad()
+  .faq-banner
+    background-position: 30%
+    padding: 0 39px
+    .container
+      padding-top: 237px
+    h2
+      font-size: 48px
+      line-height: 80px
+      margin-right: 16px
++iphone()
+  .faq-banner
+    padding: 0 15px
+    .container
+      padding-top: 103px
+    h2
+      font-size: 28px
+      line-height: 40px
+      margin-right: 6px
+    img
+      width: 7%
+
+.faq-content
+  padding: 40px 0 264px
+  .container
+    text-align: left
+  h3
+    font-size: 32px
+    line-height: 60px
+    margin-bottom: 36px
+  h4
+    font-size: 20px
+    line-height: 23px
+    margin-bottom: 16px
+  p
+    font-size: 16px
+    line-height: 24px
+    padding-left: 95px
+  li
+    margin-bottom: 40px
+  h3,h4,p
+    color: #000
++pad()
+  .faq-content
+    padding: 40px 39px 64px
+    h3
+      font-size: 32px
+      line-height: 45px
+    p
+      padding-left: 59px
++iphone()
+  .faq-content
+    padding: 24px 15px 36px
+    h3
+      font-size: 20px
+      line-height: 28px
+      margin-bottom: 12px
+    h4
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 16px
+      margin-bottom: 8px
+    p
+      font-size: 14px
+      line-height: 21px
+      padding-left: 0
+      br
+        display: none
+      &:nth-child(3):before
+        content: "\a"
+        white-space: pre
+    li
+      margin-bottom: 20px

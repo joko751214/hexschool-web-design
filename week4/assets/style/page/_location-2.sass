@@ -1,0 +1,41 @@
+.location-area
+  display: flex
+  justify-content: space-between
+  .location-content-item
+    width: 40%
+    margin-right: 30px
+  .location-content-detail
+    width: 100%
+    margin-bottom: 0
+.location-content-map
+  width: 60%
+  img
+    min-height: 100%
++pad()
+  .location-area
+    flex-wrap: wrap
+    .location-content-item
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 100%
+      margin-right: 0
+      margin-bottom: 32px
+      .location-content-image
+        width: 49%
+      .location-content-text
+        width: 49%
+  .location-content-map
+    width: 100%
++iphone()
+  .location-area
+    padding-bottom: 16px
+    .location-content-item
+      display: block
+      margin-right: 0
+      margin-bottom: 16px
+      .location-content-image
+        width: 100%
+        margin-right: 0
+      .location-content-text
+        width: 100%
